@@ -19,6 +19,13 @@ dependencies:
 import 'package:loader_container/loader_container.dart';
 ```
 
+### Define a LoaderController
+
+```dart
+// The bool value determines the initial state of loading.
+LoaderController _controller = LoaderController(true);
+```
+
 ### Basic structure
 
 ```dart
