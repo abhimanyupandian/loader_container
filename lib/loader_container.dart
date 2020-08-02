@@ -29,14 +29,7 @@ class LoaderContainer extends StatefulWidget {
 /// The main widget that encompasses the page that shows the loading widget.
 class _LoaderContainerState extends State<LoaderContainer> {
   // The default loading widget that is displayed if no custom widget is provided.
-  final Widget _defaultLoadingWidget = Center(
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        CircularProgressIndicator(),
-      ],
-    ),
-  );
+  Widget _defaultLoadingWidget;
 
   // Returns the loading widget based on user input.
   Widget _getLoader() {
@@ -44,6 +37,16 @@ class _LoaderContainerState extends State<LoaderContainer> {
       return _defaultLoadingWidget;
     }
     return widget.loadingWidget;
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _defaultLoadingWidget = Center(
+      child: CircularProgressIndicator(
+        backgroundColor: Theme.of(context).primaryColor,
+      ),
+    );
   }
 
   @override
