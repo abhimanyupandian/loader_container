@@ -40,8 +40,8 @@ class _LoaderContainerState extends State<LoaderContainer> {
   }
 
   @override
-  void initState() {
-    super.initState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
     _defaultLoadingWidget = Center(
       child: CircularProgressIndicator(
         backgroundColor: Theme.of(context).primaryColor,

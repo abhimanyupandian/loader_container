@@ -1,6 +1,6 @@
-## [0.0.4] - 02/08/2020
+## [0.0.4, 0.0.5] - 02/08/2020
 
-- 0.0.4 - Fixed CircularProgressIndicator not shown.
+- 0.0.4, 0.0.5 - Fixed CircularProgressIndicator not shown.
 
 ## [0.0.3] - 02/08/2020
 
