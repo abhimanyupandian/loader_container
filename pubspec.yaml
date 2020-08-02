@@ -1,7 +1,7 @@
 name: loader_container
-description: A Simple Loader Widget for Flutter!
-version: 0.0.1
-homepage:
+description: A Simple Loader Widget for Flutter! Easily show loading widgets when your page is doing tasks in the background!
+version: 0.0.2
+homepage: https://github.com/abhimanyupandian/loader_container
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

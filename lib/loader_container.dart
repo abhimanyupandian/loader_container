@@ -23,12 +23,9 @@ class LoaderContainer extends StatefulWidget {
 class _LoaderContainerState extends State<LoaderContainer> {
   final Widget _defaultLoadingWidget = Center(
     child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         CircularProgressIndicator(),
-        SizedBox(
-          height: 20.0,
-        ),
-        Text("Loading...")
       ],
     ),
   );
@@ -55,6 +52,15 @@ class _LoaderContainerState extends State<LoaderContainer> {
 }
 
 class LoaderController extends ValueNotifier<bool> {
-  bool value = false;
-  LoaderController(this.value) : super(value);
+  bool _value;
+  LoaderController(this._value) : super(_value);
+
+  @override
+  get value => _value;
+
+  @override
+  set value(newValue) {
+    _value = newValue;
+    notifyListeners();
+  }
 }
